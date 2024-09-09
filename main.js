@@ -18,3 +18,5 @@ const doubleArr =  arr.map(n => n*2);
 
 const randomNum = () => Math.random();
 // console.log(randomNum());
+
+setTimeout(()=> console.log('Hello world!'), 2000);
