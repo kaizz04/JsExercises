@@ -14,4 +14,7 @@ const multiply = (a,b)=> a * b;
 
 const arr = [1,2,3,4,5];
 const doubleArr =  arr.map(n => n*2);
-console.log(doubleArr);
+// console.log(doubleArr);
+
+const randomNum = () => Math.random();
+// console.log(randomNum());
