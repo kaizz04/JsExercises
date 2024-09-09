@@ -19,4 +19,8 @@ const doubleArr =  arr.map(n => n*2);
 const randomNum = () => Math.random();
 // console.log(randomNum());
 
-setTimeout(()=> console.log('Hello world!'), 2000);
+//setTimeout(()=> console.log('Hello world!'), 2000);
+
+const arr2 = [5, 10, 15, 20];
+const sum = arr2.reduce((tot, num )=> tot+num,0);
+// console.log(sum);
