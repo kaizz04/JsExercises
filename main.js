@@ -43,6 +43,11 @@ const person = {
     area(){return this.width*this.height}
   
   };
-  console.log(rectangle.area());
+  //console.log(rectangle.area());
+
+
+const power = (base,exponent=2) => base ** exponent;
+// console.log(power(5));
+// console.log(power(2,3));
 
 
