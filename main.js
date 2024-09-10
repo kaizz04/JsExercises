@@ -24,3 +24,16 @@ const randomNum = () => Math.random();
 const arr2 = [5, 10, 15, 20];
 const sum = arr2.reduce((tot, num )=> tot+num,0);
 // console.log(sum);
+
+
+const person = {
+  name:'John',
+  hobbies:['Reading','Cycling'],
+  printHobbies:function(){
+    this.hobbies.forEach(hobby=>{console.log(`${this.name} likes ${hobby}`);});
+  }
+};
+
+  person.printHobbies(); 
+
+
