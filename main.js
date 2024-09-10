@@ -34,7 +34,7 @@ const person = {
   }
 };
 
- person.printHobbies(); 
+//  person.printHobbies(); 
 
   const rectangle = {
     width: 10,
@@ -50,4 +50,6 @@ const power = (base,exponent=2) => base ** exponent;
 // console.log(power(5));
 // console.log(power(2,3));
 
+const createPerson = (name, age)=>({name,age});
+// console.log(createPerson('kaizz','23'));
 
