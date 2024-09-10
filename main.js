@@ -53,3 +53,11 @@ const power = (base,exponent=2) => base ** exponent;
 const createPerson = (name, age)=>({name,age});
 // console.log(createPerson('kaizz','23'));
 
+const arr3 = [1, 2, 3, 4];
+// const applyOperation = arr3.map(n=>n+2);
+// console.log(applyOperation);
+
+const applyOperation = (array)=>array.map(n=>n+2);
+console.log(applyOperation([1, 2, 3, 4]));
+
+
