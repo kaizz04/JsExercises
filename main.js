@@ -34,6 +34,15 @@ const person = {
   }
 };
 
-  person.printHobbies(); 
+ person.printHobbies(); 
+
+  const rectangle = {
+    width: 10,
+    height: 5,
+    // area:function(){return this.width*this.height}
+    area(){return this.width*this.height}
+  
+  };
+  console.log(rectangle.area());
 
 
