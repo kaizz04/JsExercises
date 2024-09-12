@@ -92,3 +92,31 @@ const add= addBy(2);
 // console.log(add(22));
 
 
+function bankAccount(){
+  let balance=0;
+
+  return {
+    deposit(amount){
+      return balance += amount;
+    },
+    withdraw(amount){
+      if(balance>0 && amount<=balance){
+        return balance -= amount;
+        
+
+      }else{
+        return "This amount not exist in account";
+      }
+
+    }
+
+
+
+
+  }
+
+}
+
+const account = bankAccount();
+console.log(account.deposit(10000));
+console.log(account.withdraw(10000));
