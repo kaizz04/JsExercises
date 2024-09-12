@@ -109,14 +109,32 @@ function bankAccount(){
       }
 
     }
-
-
-
-
   }
 
 }
-
 const account = bankAccount();
-console.log(account.deposit(10000));
-console.log(account.withdraw(10000));
+// console.log(account.deposit(10000));
+// console.log(account.withdraw(10000));
+
+function memoize(fn){
+  let cache ={};
+
+  return function(...args){
+    const key = JSON.stringify(args);
+    if(cache[key]){
+      console.log('fetching from cache ',key);
+      return cache[key];
+
+    }
+    const result = fn(...args);
+    cache[key]=result;
+    console.log('Calculating result ', key);
+    return result;
+  };
+
+}
+
+// const slowSquare  = ((n)=>n*n);
+// console.log(slowSquare(5));
+// console.log(slowSquare(5));
+
