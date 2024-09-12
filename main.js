@@ -82,6 +82,13 @@ function createCounter(){
 }
 
 const counter = createCounter();
-console.log(counter());
+// console.log(counter());
+
+function addBy(x){
+  return(y)=>y+x ;
+
+}
+const add= addBy(2);
+// console.log(add(22));
 
 
