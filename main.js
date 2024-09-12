@@ -58,6 +58,18 @@ const arr3 = [1, 2, 3, 4];
 // console.log(applyOperation);
 
 const applyOperation = (array)=>array.map(n=>n+2);
-console.log(applyOperation([1, 2, 3, 4]));
+//console.log(applyOperation([1, 2, 3, 4]));
+
+// Closure
+
+function outer(){
+  const greeting = "Hello";
+  function inner(){
+    console.log(`${greeting}, World`);
+
+  }
+  inner();
+}
+outer();
 
 
