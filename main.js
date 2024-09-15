@@ -169,7 +169,21 @@ function compose(f,g){
 
 const fn1 =  x => x*2;
 const fn2 = x => x* x;
-const result=(fn1,fn2);
-console.log(result(4));
+// const result=(fn1,fn2);
+// console.log(result(4));
+
+// Async programming
+
+function delay(ms){
+  return new Promise((resolve)=>setTimeout(resolve,ms));
+}
+
+async function greetAfterDelay(){
+  await delay(2000);
+  console.log("Hello after two sec");
+
+}
+
+greetAfterDelay();
 
 
