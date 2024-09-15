@@ -208,5 +208,23 @@ async function getSquareVal(num){
   });
 }
 
-getSquareVal(4).then(console.log)
+// getSquareVal(4).then(console.log)
+
+async function fetchDataWithErrorHandling(){
+  try {
+    const resp = await fetch('https://jsonplaceholder.typicode.com/todos/invalid-url');
+  if(!resp.ok){
+    throw new Error('Failed to fetch data');
+    
+  }
+  const data = await resp.json();
+  console.log(data);
+    
+  } catch (error) {
+    console.log('Error', error.message)
+    
+  }
+}
+
+fetchDataWithErrorHandling();
 
