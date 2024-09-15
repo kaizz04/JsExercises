@@ -192,6 +192,13 @@ async function fetchData(){
   console.log(data);
 }
 
-fetchData();
+// fetchData();
 
+
+function getSuccess(){
+  return new Promise(resolve =>{
+    setTimeout(()=> resolve('Success'),2000);
+  });
+}
+getSuccess().then(console.log);
 
