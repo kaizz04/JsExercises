@@ -138,3 +138,13 @@ function memoize(fn){
 // console.log(slowSquare(5));
 // console.log(slowSquare(5));
 
+function createMultiplier(factor){
+
+  return (num)=>{
+    return num * factor;
+  }
+
+}
+// var getMultiplierBy3 = createMultiplier(3);
+// console.log(getMultiplierBy3(4));
+
