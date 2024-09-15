@@ -50,7 +50,7 @@ const power = (base,exponent=2) => base ** exponent;
 // console.log(power(5));
 // console.log(power(2,3));
 
-const createPerson = (name, age)=>({name,age});
+// const createPerson = (name, age)=>({name,age});
 // console.log(createPerson('kaizz','23'));
 
 const arr3 = [1, 2, 3, 4];
@@ -147,4 +147,17 @@ function createMultiplier(factor){
 }
 // var getMultiplierBy3 = createMultiplier(3);
 // console.log(getMultiplierBy3(4));
+
+function createPerson(){
+  let name;
+  return {
+    getName:()=>{return name },
+    setName:(newName)=>{ name =newName }
+  };
+}
+
+const person1 = createPerson();
+person1.setName('kaizz');
+console.log(person1.getName());
+
 
