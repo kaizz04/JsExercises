@@ -200,5 +200,13 @@ function getSuccess(){
     setTimeout(()=> resolve('Success'),2000);
   });
 }
-getSuccess().then(console.log);
+// getSuccess().then(console.log);
+
+async function getSquareVal(num){
+  return new Promise(resolve =>{
+    setTimeout(()=>resolve(num * num ),2000);
+  });
+}
+
+getSquareVal(4).then(console.log)
 
