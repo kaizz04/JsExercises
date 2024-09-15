@@ -156,8 +156,20 @@ function createPerson(){
   };
 }
 
-const person1 = createPerson();
-person1.setName('kaizz');
-console.log(person1.getName());
+// const person1 = createPerson();
+// person1.setName('kaizz');
+// console.log(person1.getName());
+
+function compose(f,g){
+  return (x)=>{
+    return f(g(x));
+  };
+
+}
+
+const fn1 =  x => x*2;
+const fn2 = x => x* x;
+const result=(fn1,fn2);
+console.log(result(4));
 
 
