@@ -285,4 +285,18 @@ const person1 = {
   }
 
 }
-person1.greet();
+// person1.greet();
+
+const person2 = {
+  name:'manu',
+  regularGreet:function(){
+    console.log(`Hello ${this.name}`)
+
+  },
+  arrowGreet:()=>{
+    console.log(`Hello ${this.name}`);
+
+  }
+}
+person2.arrowGreet(); //undefined
+person2.regularGreet();
