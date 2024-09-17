@@ -316,7 +316,7 @@ const person3 = {
     },2000);
   }
 }
-person3.greet(); //Expected output: undefined (because `this` refers to the global object)
+// person3.greet(); //Expected output: undefined (because `this` refers to the global object)
 
 const person4 = {
   name:'kaizz',
@@ -326,4 +326,21 @@ const person4 = {
     },2000);
   }
 }
-person3.greet();
+// person4.greet();
+
+class Person{
+  constructor(name,age){
+    this.name = name;
+    this.age = age;
+
+  }
+  async introduce(){
+    await new Promise(resolve => {
+      setTimeout(resolve,2000);
+    }); 
+    console.log(`I'm ${this.name} & still ${this.age} years old`)
+  }
+}
+
+const personObj = new Person('Kaizz', 23);
+personObj.introduce();
