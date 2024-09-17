@@ -306,4 +306,14 @@ function Car(brand,name){
   this.name = name;
 };
 const car1 = new Car('BMW','Bmw i7');
-console.log(car1.name);
+// console.log(car1.name);
+
+const person3 = {
+  name:'kaizz',
+  greet(){
+    setTimeout(function(){
+      console.log(this.name);
+    },2000);
+  }
+}
+person3.greet(); //Expected output: undefined (because `this` refers to the global object)
