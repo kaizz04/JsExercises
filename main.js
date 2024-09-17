@@ -226,5 +226,35 @@ async function fetchDataWithErrorHandling(){
   }
 }
 
-fetchDataWithErrorHandling();
+// fetchDataWithErrorHandling();
+
+function doubleAfter2Seconds(num){
+  return new Promise(resolve=>{
+    setTimeout(()=>resolve (num * 2),2000);
+  });
+
+}
+function squareAfter1Second(num){
+  return new Promise(resolve=>{
+    setTimeout(()=>resolve(num * num),1000);
+  });
+}
+
+ async function processNumber(num){
+  const doubleValue = await doubleAfter2Seconds(num);
+  const squareValue = await squareAfter1Second(doubleValue);
+
+  return squareValue;
+
+ }
+
+ let resolvedValue;
+
+processNumber(2).then(r=> {
+  resolvedValue = r;
+  console.log(resolvedValue); 
+});
+
+console.log("resolve value "+ resolvedValue)
+
 
