@@ -262,4 +262,15 @@ async function processNumbers(num1,num2){
   return {double,square};
 }
 
-processNumbers(2,3).then(console.log);
+// processNumbers(2,3).then(console.log);
+
+async function countDownNum(num){
+  if(num<0) return;
+  console.log(num);
+
+  await new Promise(resolve =>{
+    setTimeout(resolve,1000);
+  });
+  await countDownNum(num-1);
+}
+countDownNum(3);
