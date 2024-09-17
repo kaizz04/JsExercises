@@ -250,11 +250,16 @@ function squareAfter1Second(num){
 
  let resolvedValue;
 
-processNumber(2).then(r=> {
-  resolvedValue = r;
-  console.log(resolvedValue); 
-});
+// processNumber(2).then(r=> {
+//   resolvedValue = r;
+//   console.log(resolvedValue); 
+// });
 
-console.log("resolve value "+ resolvedValue)
+// console.log("resolve value "+ resolvedValue) //This runs before the promise resolves, resolvedValue is still undefined:
 
+async function processNumbers(num1,num2){
+  const [double,square] = await Promise.all([doubleAfter2Seconds(num1),squareAfter1Second(num2)]);
+  return {double,square};
+}
 
+processNumbers(2,3).then(console.log);
