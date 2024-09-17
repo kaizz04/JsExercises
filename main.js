@@ -298,5 +298,12 @@ const person2 = {
 
   }
 }
-person2.arrowGreet(); //undefined
-person2.regularGreet();
+// person2.arrowGreet(); //undefined
+// person2.regularGreet();
+
+function Car(brand,name){
+  this.brand  = brand;
+  this.name = name;
+};
+const car1 = new Car('BMW','Bmw i7');
+console.log(car1.name);
