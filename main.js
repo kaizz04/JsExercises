@@ -273,4 +273,16 @@ async function countDownNum(num){
   });
   await countDownNum(num-1);
 }
-countDownNum(3);
+// countDownNum(3);
+
+
+//* 'this' keyword */
+
+const person1 = {
+  name:'kaizz',
+  greet(){
+    console.log(`Hello ${this.name}`);
+  }
+
+}
+person1.greet();
