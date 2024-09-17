@@ -317,3 +317,13 @@ const person3 = {
   }
 }
 person3.greet(); //Expected output: undefined (because `this` refers to the global object)
+
+const person4 = {
+  name:'kaizz',
+  greet(){
+    setTimeout(()=>{
+      console.log(this.name); // 'this' refers to the person object
+    },2000);
+  }
+}
+person3.greet();
