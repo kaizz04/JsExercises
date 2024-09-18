@@ -357,7 +357,26 @@ class Person1 {
     });
   }
 }
-const p1 = new Person1('manu');
-const p1Fun = p1.greet.bind(p1);
-p1Fun();
+// const p1 = new Person1('manu');
+// const p1Fun = p1.greet.bind(p1);
+// p1Fun();
+
+class Person2 {
+  constructor(name) {
+    this.name = name;
+  }
+
+  async fetchData() {
+    return new Promise((resolve) => setTimeout(() => resolve(`${this.name}'s data`), 1000));
+  }
+
+  async process() {
+    const data = await this.fetchData();
+    console.log(`Processing: ${data}`);
+  }
+}
+
+const p2 = new Person2('Charlie');
+const pr =p2.process.bind(p2);
+pr();
 
