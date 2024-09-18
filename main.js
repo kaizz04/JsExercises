@@ -402,3 +402,28 @@ class Person3{
 
 // const p3 = new Person3('kaveesh');
 // p3.process();
+
+/** OOP Concepts */
+
+class BankAccount{
+  constructor(owner){
+    let balance = 0;
+    this.owner = owner;
+
+    this.getBalance = ()=>{
+      return balance;
+
+    }
+
+    this.deposit=(amount)=>{
+     if(amount>0){
+      balance+=amount;
+      return balance;
+     }
+    }
+  }
+}
+
+const ba = new BankAccount();
+console.log(ba.deposit(2000));
+console.log(ba.getBalance());
