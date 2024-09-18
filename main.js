@@ -342,5 +342,22 @@ class Person{
   }
 }
 
-const personObj = new Person('Kaizz', 23);
-personObj.introduce();
+// const personObj = new Person('Kaizz', 23);
+// personObj.introduce();
+
+class Person1 {
+  constructor (name){
+    this.name=name;
+
+  }
+  async greet(){
+    await new Promise(resolve=>{
+      setTimeout(resolve,2000);
+      console.log(`Hello I'm ${this.name}`);
+    });
+  }
+}
+const p1 = new Person1('manu');
+const p1Fun = p1.greet.bind(p1);
+p1Fun();
+
