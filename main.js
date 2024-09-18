@@ -376,7 +376,29 @@ class Person2 {
   }
 }
 
-const p2 = new Person2('Charlie');
-const pr =p2.process.bind(p2);
-pr();
+// const p2 = new Person2('Charlie');
+// const pr =p2.process.bind(p2);
+// pr();
 
+
+class Person3{
+  constructor(name){
+    this.name = name;
+  }
+
+  fetchData(){
+    return new Promise(resolve=>{
+      setTimeout(()=>resolve(`This is ${this.name} data`),2000);
+    });
+  }
+
+  process(){
+    this.fetchData().then((data)=>{
+      console.log(`Processing data, ${data}`);
+
+    });
+  }
+}
+
+// const p3 = new Person3('kaveesh');
+// p3.process();
