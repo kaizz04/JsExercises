@@ -507,6 +507,11 @@ const user1 = Object.freeze({
 // user1.age=45;
 // console.log(user1);
 
+const fruits = ['apple','orange','banana'];
+const newFruit = fruits.concat('grapes');
+
+// console.log(newFruit);
+
 
 
 
