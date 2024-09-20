@@ -528,6 +528,11 @@ const upAnimals = [...animals,'rabbit'];
 
 const women = {name:'anne',age:30};
 const updatedWomen = {...women,age:32};
-console.log(updatedWomen);
+// console.log(updatedWomen);
+
+const organicFruits = ['apple','orange','banana'];
+const newOFruits = organicFruits.filter(fruit=> fruit !== 'apple');
+console.log(newOFruits);
+
 
 
