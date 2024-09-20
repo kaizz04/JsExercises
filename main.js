@@ -526,4 +526,8 @@ const animals = ['cat', 'dog'];
 const upAnimals = [...animals,'rabbit'];
 // console.log(upAnimals);
 
+const women = {name:'anne',age:30};
+const updatedWomen = {...women,age:32};
+console.log(updatedWomen);
+
 
