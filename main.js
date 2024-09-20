@@ -434,4 +434,7 @@ class BankAccount{
   const arr5 = [7,5,9];
 
   const mergedArr = [...arr4,...arr5];
-  console.log(mergedArr);
+  // console.log(mergedArr);
+
+  const copyArr = [...arr4];
+  
