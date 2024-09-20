@@ -437,4 +437,9 @@ class BankAccount{
   // console.log(mergedArr);
 
   const copyArr = [...arr4];
-  
+
+  const obj1 = {name:'kaizz,',age:23};
+  const obj2 = {hobby:'cricket'};
+
+  const mergedObj = {...obj1,...obj2};
+  // console.log(mergedObj);
