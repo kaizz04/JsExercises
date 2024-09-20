@@ -512,6 +512,11 @@ const newFruit = fruits.concat('grapes');
 
 // console.log(newFruit);
 
+const myCar = {make:'Toyota', model:'Corolla'};
+const updatedCar = Object.assign({},myCar,{model:'Camry'});
+
+console.log(myCar);
+console.log(updatedCar);
 
 
 
