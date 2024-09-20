@@ -455,4 +455,9 @@ class BankAccount{
   const [f,...reset] = arr6;
   // console.log(reset);
 
+  const str = "hello";
+  const chrArr = [...str];
+
+  const newArr = [...arr4,3,4,...arr5];
+  console.log(newArr);
   
