@@ -467,6 +467,22 @@ class BankAccount{
 
   const nestArr1 = [1,[2,3],4];
   const flatArr = [1,...nestArr1[1],4];
-  console.log(flatArr);
+  // console.log(flatArr);
+
+  const arr7 = [
+    {id:1,name:'John'},
+    {id:2,name:'Alice'}
+
+  ];
+
+  const arr8 = [
+    {id:2,name:'Alice'},
+    {id:3,name:'Bob'}
+  ];
+
+  const finalArr = [...arr7, ...arr8.filter(item8=> !arr7.some(item7 =>item7.id===item8.id))];
+  // console.log(finalArr);
+
+
 
 
