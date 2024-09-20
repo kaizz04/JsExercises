@@ -443,3 +443,10 @@ class BankAccount{
 
   const mergedObj = {...obj1,...obj2};
   // console.log(mergedObj);
+
+  function sumArray(arr4){
+    return arr4.reduce((acc,cur)=> (acc+cur),0);
+
+  }
+
+  // console.log(sumArray(arr4));
