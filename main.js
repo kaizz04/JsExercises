@@ -424,6 +424,14 @@ class BankAccount{
   }
 }
 
-const ba = new BankAccount();
-console.log(ba.deposit(2000));
-console.log(ba.getBalance());
+// const ba = new BankAccount();
+// console.log(ba.deposit(2000));
+// console.log(ba.getBalance());
+
+  //** The spread (...) and rest (...) operators */
+
+  const arr4 = [1,2,3];
+  const arr5 = [7,5,9];
+
+  const mergedArr = [...arr4,...arr5];
+  console.log(mergedArr);
