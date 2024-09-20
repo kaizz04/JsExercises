@@ -453,4 +453,6 @@ class BankAccount{
 
   const arr6 = [4,6,8,9,1];
   const [f,...reset] = arr6;
-  console.log(reset);
+  // console.log(reset);
+
+  
