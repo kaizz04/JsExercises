@@ -497,7 +497,15 @@ cloneObj.details.age=23;
 // console.log(original);
 // console.log(cloneObj);
 
+/** Immutability key concept */
 
+const user1 = Object.freeze({
+  name:'Alice',
+  age:23
+})
+
+// user1.age=45;
+// console.log(user1);
 
 
 
