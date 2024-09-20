@@ -459,5 +459,9 @@ class BankAccount{
   const chrArr = [...str];
 
   const newArr = [...arr4,3,4,...arr5];
-  console.log(newArr);
-  
+  // console.log(newArr);
+
+  const man = {name:'kaizz',age:32,hobby:'drawing',country:'SL'};
+  const {name, ...details} = man;
+  console.log(details);
+
