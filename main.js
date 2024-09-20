@@ -463,5 +463,10 @@ class BankAccount{
 
   const man = {name:'kaizz',age:32,hobby:'drawing',country:'SL'};
   const {name, ...details} = man;
-  console.log(details);
+  // console.log(details);
+
+  const nestArr1 = [1,[2,3],4];
+  const flatArr = [1,...nestArr1[1],4];
+  console.log(flatArr);
+
 
