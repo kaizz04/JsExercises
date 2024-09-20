@@ -519,8 +519,11 @@ const updatedCar = Object.assign({},myCar,{model:'Camry'});
 // console.log(updatedCar);
 
 const arr9 = [23,45,66,77,89];
-const arr10 = arr9.slice(1);
-console.log(arr10);
+// const arr10 = arr9.slice(1);
+// console.log(arr10);
 
+const animals = ['cat', 'dog'];
+const upAnimals = [...animals,'rabbit'];
+// console.log(upAnimals);
 
 
