@@ -483,6 +483,22 @@ class BankAccount{
   const finalArr = [...arr7, ...arr8.filter(item8=> !arr7.some(item7 =>item7.id===item8.id))];
   // console.log(finalArr);
 
+const original = {
+  name:'kauzz',
+  details:{age:25,job:'engineer'}
+}
+
+const cloneObj = {
+  ...original,
+  details:{...original.details}
+};
+
+cloneObj.details.age=23;
+// console.log(original);
+// console.log(cloneObj);
+
+
+
 
 
 
