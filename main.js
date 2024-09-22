@@ -546,11 +546,17 @@ function debounce(func,delay){
   };
 }
 
-function sayHello(){
-  console.log('Hello Kaizz...');
-}
+// function sayHello(){
+//   console.log('Hello Kaizz...');
+// }
 
-const  debouncedHello = debounce(sayHello,500);
-debouncedHello();
+// const  debouncedHello = debounce(sayHello,500);
+// debouncedHello();
+
+const handleResize = ()=>{
+  console.log('Resizing.......');
+};
+
+window.addEventListener('resize',debounce(handleResize,500));
 
 
