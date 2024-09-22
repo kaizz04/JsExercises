@@ -557,6 +557,31 @@ const handleResize = ()=>{
   console.log('Resizing.......');
 };
 
-window.addEventListener('resize',debounce(handleResize,500));
+// window.addEventListener('resize',debounce(handleResize,500));
 
+function throttle(func,limit){
+  let inThrottle;
+  
+  return function(...args){
+    if(!inThrottle){
+      func(...args);
+      inThrottle = true;
+      setInterval(()=> inThrottle=false,limit);
+    }
+  };
+}
 
+function logMessage(){
+  console.log('Throttled Message...');
+}
+
+// const  throttledLogMessage = throttle(logMessage,500);
+// throttledLogMessage();
+
+const searchInput = document.getElementById('search');
+
+const handleSearch = ()=>{
+  console.log('search for');
+}
+
+searchInput.addEventListener('input',debounce(handleSearch,300));
