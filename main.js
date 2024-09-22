@@ -578,10 +578,24 @@ function logMessage(){
 // const  throttledLogMessage = throttle(logMessage,500);
 // throttledLogMessage();
 
-const searchInput = document.getElementById('search');
+// const searchInput = document.getElementById('search');
 
 const handleSearch = ()=>{
   console.log('search for');
 }
 
-searchInput.addEventListener('input',debounce(handleSearch,300));
+// searchInput.addEventListener('input',debounce(handleSearch,300));
+
+const handleScroll=()=>{
+  console.log('Scrolled');
+};
+
+// window.addEventListener('scroll',throttle(handleScroll,1000));
+
+// const button = document.getElementById('mybutton');
+const handleClick = ()=>{
+  console.log('Button clicked');
+
+}
+// button.addEventListener('click',debounce(handleClick,500));
+
