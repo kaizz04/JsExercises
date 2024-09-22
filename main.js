@@ -532,7 +532,25 @@ const updatedWomen = {...women,age:32};
 
 const organicFruits = ['apple','orange','banana'];
 const newOFruits = organicFruits.filter(fruit=> fruit !== 'apple');
-console.log(newOFruits);
+// console.log(newOFruits);
 
+
+//** Debouncing and throttling  */
+
+function debounce(func,delay){
+  let timeoutId;
+
+  return function (...args){
+    clearTimeout(timeoutId);
+    timeoutId  = setTimeout(()=> func(...args),delay);
+  };
+}
+
+function sayHello(){
+  console.log('Hello Kaizz...');
+}
+
+const  debouncedHello = debounce(sayHello,500);
+debouncedHello();
 
 
