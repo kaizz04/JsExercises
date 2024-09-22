@@ -599,3 +599,15 @@ const handleClick = ()=>{
 }
 // button.addEventListener('click',debounce(handleClick,500));
 
+async function fetchSearchResults(query){
+  const resp = await fetch(`https://api.example.com/search?q=${query}`);
+  const data = await resp.json();
+
+  console.log('Search results: ',data);
+
+}
+// const searchInput = document.getElementById('searchInput');
+// searchInput.addEventListener('input'.debounce((event)=>{fetchSearchResults(event.target.value),300}));
+
+
+
